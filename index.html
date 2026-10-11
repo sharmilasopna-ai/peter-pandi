@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DreamSpace | Explore Beyond</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080818;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #bd8cff;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 22px;
+}
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(ellipse at 50% 40%,
+    #40206b 0%, #15102e 40%, #080818 75%);
+}
+
+.tag {
+  color: #d3a7ff;
+  border: 1px solid #8051b8;
+  padding: 9px 18px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: 1.1;
+  max-width: 850px;
+}
+
+h1 span {
+  background: linear-gradient(90deg, #c99cff, #72d9ff);
+  color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  color: #b6b3ca;
+  font-size: 18px;
+  margin: 25px 0;
+  line-height: 1.7;
+}
+
+.btn {
+  background: linear-gradient(90deg, #995cff, #547cff);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform .3s;
+}
+
+.btn:hover {
+  transform: scale(1.07);
+}
+
+section {
+  padding: 50px 8%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid #30264b;
+  border-radius: 20px;
+  padding: 30px 22px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #a77aff;
+  background: rgba(130,80,200,.12);
+}
+
+.card .emoji {
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #aaa8c0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #85829e;
+  border-top: 1px solid #211c36;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 22px 5%;
+  }
+  nav a {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  section {
+    padding: 40px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">✦ DreamSpace</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#explore">Explore</a>
+  </div>
+</nav>
+
+<main>
+  <div class="hero" id="home">
+    <div class="tag">✧ YOUR IMAGINATION STARTS HERE</div>
+
+    <h1>Explore Beyond<br>
+      <span>the Ordinary.</span>
+    </h1>
+
+    <p>
+      Discover new ideas, unlock your creativity,<br>
+      and build something extraordinary.
+    </p>
+
+    <a href="#explore" class="btn">Start Exploring ↗</a>
+  </div>
+
+  <section id="explore">
+    <h2>Discover Your Universe</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🚀</div>
+        <h3>Innovation</h3>
+        <p>Turn bold ideas into exciting new possibilities.</p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🎨</div>
+        <h3>Creativity</h3>
+        <p>Imagine without limits and express your unique style.</p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🌌</div>
+        <h3>Exploration</h3>
+        <p>Discover new worlds and find inspiration everywhere.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>✦ DreamSpace © 2026 | Made with imagination</p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
